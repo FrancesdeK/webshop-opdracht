@@ -1,0 +1,295 @@
+ /* Zorg dat de hoogte en breedte van elk element inclusief the 'padding' en 'border' is */
+* {
+  box-sizing: border-box;
+} 
+
+/* Layout voor alle elementen op de webpagina */
+body {
+  font-family: "corbel";
+  font-size: 12pt;
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  height: 35px;
+  padding: 2px 20px;
+  background-color: lightyellow;
+  font-size: 1.4em;
+  position: fixed;
+  top: 0;
+}
+
+main {
+  background-color: lightblue;
+  overflow: auto;
+  margin-top: 35px;
+	background-image: url("../img/background.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 100%;
+}
+
+footer {
+  width: 100%;
+  background-color: silver;
+}
+
+.footerDark {
+  width: 100%;
+  background-color: silver;
+}
+
+.headerIcon {
+  margin-left: 20px;
+  float: right;
+  cursor: pointer;
+}
+
+.headerIcon:hover {
+  color: darkred;
+}
+
+.shoppingCartAmount {
+  width: 20px;
+  line-height: 15px;
+  margin-left: 3px;
+  padding: 2px;
+  background-color: lightgreen;
+  border-radius: 25px;
+  font-size: 0.6em;
+  text-align: center;
+}
+
+.nav { 
+  width: 100%;
+  padding: 10px 20px;
+  background-color: darksalmon;
+  float: left;
+}
+
+.mainImage {
+  width: 100%;
+}
+
+.mainImg {
+  width: 100%;
+  height: auto;
+}
+
+.filter {
+  width: 100%;
+  margin-top: -5px;
+  padding: 5px 20px;
+  background-color: darksalmon;
+  float: left;
+}
+
+.navButton {
+  line-height: 25px;
+  padding: 2px 5px;
+  color: chocolate;
+  background-color: lightyellow;
+  border: 1px solid chocolate;
+  border-radius: 30px;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.navButton:hover {
+  background-color: khaki;
+}
+
+.navButtonActive {
+  line-height: 25px;
+  padding: 2px 5px;
+  color: white;
+  background-color: #e27450;
+  border: 1px solid chocolate;
+  border-radius: 30px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.btnAdd {
+  line-height: 15px;
+  padding: 2px 10px;
+  color: white;
+  background-color: green;
+  border: 1px solid darkgreen;
+  border-radius: 20px;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.btnOrder {
+  margin-top: 10px;
+  padding: 2px 15px;
+  background-color: navy;
+  border: 1px solid darkblue;
+  color: white;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.btnSearch {
+  line-height: 15px;
+  padding: 2px 10px;
+  color: navy;
+  background-color: lightblue;
+  border: 1px solid navy;
+  border-radius: 20px;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.txtSearch {
+  width: 100%;
+}
+
+.btnFilter{
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Zet de lay-out van de filter popup (omdat het een popup is wordt deze bij default niet getoond) */
+.filter-content {
+  max-height: calc(100vh - 75px);
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 300px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  overflow: auto;
+}
+
+/* Zet de padding van de filter items */
+.filter-content ul {
+  padding-left: 10px;
+}
+
+/* Zet de layout van een item in de filter popup */
+.filter-content li {
+  color: black;
+  padding: 6px 20px;
+  text-decoration: none;
+  display: block;
+  cursor: pointer;
+}
+
+/* Geeft een filter item een andere kleur en toon de muisaanwijzer als je met je buis over het filter item gaat */
+.filter-content li:hover {
+  background-color: #f1f1f1;
+}
+
+/* Toon de filter popup als je met de muis over de filter div gaat */
+.btnFilter:hover .filter-content {
+  display: block;
+}
+
+.selectedFilter {
+  max-width: 10%;
+  line-height: 20px;
+  padding: 2px 5px;
+  background-color: lightgrey;
+  border: 1px solid silver;
+  border-radius: 25px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.removeFilter {
+  width: 20px;
+  height: 20px;
+  line-height: 16px;
+  padding: 0px 6px;
+  color: white;
+  background-color: red;
+  border-radius: 30px;
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.articleList {
+  padding: 5px 20px;  
+}
+
+.article {
+  margin-top: 20px;
+  padding: 5px 10px;
+  background-color: lightyellow;
+  border-radius: 50px;
+  text-align: center;
+}
+
+.articleImg {
+  width: 80%;
+  height: auto;
+}
+
+.basket {
+  max-height: calc(100vh - 50px);
+  position: fixed;
+  top: 30px;
+  right: 0px;
+  display: none;
+  background-color: #f9f9f9;
+  border: 2px solid darksalmon;
+  min-width: 300px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 20px;
+  overflow: auto;
+}
+
+/* Zorgt ervoor dat flow wordt gewist, zodat andere elementen die niet in een rij zitten goed geplaatst worden */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Zorgt dat alle elementen een kolon naar links 'schuiven' en geeft deze elementen een padding van 5 pixels */
+[class*="col-"] {
+  float: left;
+  padding: 5px 20px;
+}
+
+/* Kolom breedte voor mobiele telefoons (alle kolommem zijn net zo breed als het scherm) */
+[class*="col-"] {
+  width: 100%;
+}
+
+/* Kolom breedtes voor tablets (schermem met een breedte van meer dan 600 pixels) */
+@media only screen and (min-width: 600px) {
+.col-s-1 {width: 8.33%;}
+.col-s-2 {width: 16.66%;}
+.col-s-3 {width: 25%;}
+.col-s-4 {width: 33.33%;}
+.col-s-5 {width: 41.66%;}
+.col-s-6 {width: 50%;}
+.col-s-7 {width: 58.33%;}
+.col-s-8 {width: 66.66%;}
+.col-s-9 {width: 75%;}
+.col-s-10 {width: 83.33%;}
+.col-s-11 {width: 91.66%;}
+.col-s-12 {width: 100%;}
+  
+/* Kolom breedtes voor desktops (schermem met een breedte van meer dan 768 pixels) */
+@media only screen and (min-width: 768px) {
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}

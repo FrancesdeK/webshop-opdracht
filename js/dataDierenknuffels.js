@@ -1,0 +1,44 @@
+function getArticles() {
+  let articles = '{"articles": [' +
+                  '{"id":1001,"name":"beer 1","image":"beer_0.jpg","price":39.95,"type":"beer","color":"bruin"},' +
+                  '{"id":1002,"name":"beer 2","image":"beer_1.jpg","price":24.95,"type":"beer","color":"wit"},' +
+                  '{"id":1003,"name":"beer 3","image":"beer_2.jpg","price":14.95,"type":"beer","color":"zwart"},' +
+                  '{"id":1004,"name":"beer 4","image":"beer_3.jpg","price":29.95,"type":"beer","color":"bruin"},' +
+                  '{"id":1005,"name":"beer 5","image":"beer_4.jpg","price":49.95,"type":"beer","color":"bruin"},' +
+                  '{"id":1006,"name":"beer 6","image":"beer_5.jpg","price":12.95,"type":"beer","color":"wit"},' +
+                  '{"id":1007,"name":"beer 7","image":"beer_6.jpg","price":29.95,"type":"beer","color":"blauw"},' +
+                  '{"id":1008,"name":"beer 8","image":"beer_7.jpg","price":19.95,"type":"beer","color":"grijs"},' +
+                  '{"id":1009,"name":"beer 9","image":"beer_8.jpg","price":19.95,"type":"beer","color":"roze"},' +
+                  '{"id":1010,"name":"beer 10","image":"beer_9.jpg","price":24.95,"type":"beer","color":"bruin"},' +
+                  '{"id":1011,"name":"beer 11","image":"beer_0.jpg","price":39.95,"type":"beer","color":"bruin"},' +
+                  '{"id":1012,"name":"beer 12","image":"beer_1.jpg","price":24.95,"type":"beer","color":"wit"},' +
+                  '{"id":1013,"name":"beer 13","image":"beer_2.jpg","price":14.95,"type":"beer","color":"zwart"},' +
+                  '{"id":1014,"name":"beer 14","image":"beer_3.jpg","price":29.95,"type":"beer","color":"bruin"},' +
+                  '{"id":1015,"name":"beer 15","image":"beer_4.jpg","price":49.95,"type":"beer","color":"bruin"},' +
+                  '{"id":1101,"name":"beer kerst 1","image":"beer_kerst_01.jpg","price":69.95,"type":"beer","color":"bruin"},' +
+                  '{"id":1102,"name":"beer kerst 2","image":"beer_kerst_02.jpg","price":74.95,"type":"beer","color":"bruin"},' +
+                  '{"id":4001,"name":"leeuw 1","image":"leeuw_0.jpg","price":39.95,"type":"leeuw","color":"bruin"},' +
+                  '{"id":4002,"name":"leeuw 2","image":"leeuw_1.jpg","price":24.95,"type":"leeuw","color":"wit"},' +
+                  '{"id":4003,"name":"leeuw 3","image":"leeuw_2.jpg","price":14.95,"type":"leeuw","color":"zwart"},' +
+                  '{"id":4004,"name":"leeuw 4","image":"leeuw_3.jpg","price":29.95,"type":"leeuw","color":"bruin"},' +
+                  '{"id":4005,"name":"leeuw 5","image":"leeuw_4.jpg","price":49.95,"type":"leeuw","color":"bruin"},' +
+                  '{"id":4006,"name":"leeuw 6","image":"leeuw_5.jpg","price":12.95,"type":"leeuw","color":"wit"},' +
+                  '{"id":4007,"name":"leeuw 7","image":"leeuw_6.jpg","price":29.95,"type":"leeuw","color":"blauw"},' +
+                  '{"id":4008,"name":"leeuw 8","image":"leeuw_7.jpg","price":19.95,"type":"leeuw","color":"grijs"},' +
+                  '{"id":4009,"name":"leeuw 9","image":"leeuw_8.jpg","price":19.95,"type":"leeuw","color":"roze"},' +
+                  '{"id":4010,"name":"leeuw 10","image":"leeuw_9.jpg","price":24.95,"type":"leeuw","color":"bruin"},' +
+                  '{"id":2001,"name":"hond 1","image":"hond_0.jpg","price":39.95,"type":"hond","color":"bruin"},' +
+                  '{"id":2002,"name":"hond 2","image":"hond_1.jpg","price":24.95,"type":"hond","color":"wit"},' +
+                  '{"id":2003,"name":"hond 3","image":"hond_2.jpg","price":14.95,"type":"hond","color":"zwart"},' +
+                  '{"id":2004,"name":"hond 4","image":"hond_3.jpg","price":29.95,"type":"hond","color":"bruin"},' +
+                  '{"id":2005,"name":"hond 5","image":"hond_4.jpg","price":49.95,"type":"hond","color":"bruin"},' +
+                  '{"id":2006,"name":"hond 6","image":"hond_5.jpg","price":12.95,"type":"hond","color":"wit"},' +
+                  '{"id":2007,"name":"hond 7","image":"hond_6.jpg","price":29.95,"type":"hond","color":"blauw"},' +
+                  '{"id":2008,"name":"hond 8","image":"hond_7.jpg","price":19.95,"type":"hond","color":"grijs"},' +
+                  '{"id":3001,"name":"poes 1","image":"poes_0.jpg","price":39.95,"type":"poes","color":"bruin"},' +
+                  '{"id":3002,"name":"poes 2","image":"poes_1.jpg","price":24.95,"type":"poes","color":"wit"},' +
+                  '{"id":3003,"name":"poes 3","image":"poes_2.jpg","price":14.95,"type":"poes","color":"zwart"},' +
+                  '{"id":9001,"name":"olifant 1","image":"olifant_0.jpg","price":39.95,"type":"olifant","color":"bruin"} ]}';
+
+    return JSON.parse(articles).articles;
+}

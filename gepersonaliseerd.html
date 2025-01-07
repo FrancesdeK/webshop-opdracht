@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stuffz</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/stuffz.css">
+
+  <script src="js/allArticles.js"></script>
+  <script src="js/dataGepersonaliseerd.js"></script>
+  <script src="js/stuffz.js"></script>
+</head>
+<body>
+  <header>
+    Stuffz
+    <div class="headerIcon shoppingCartAmount" id="aantalInWinkelwagen">0</div>
+    <div class="headerIcon"><i class="fa fa-shopping-cart" aria-hidden="true" onclick="toggleBasket();"></i></div>
+    <div class="headerIcon"><i class="fa fa-sign-in" aria-hidden="true"></i></div>
+  </header>
+  
+  <div class="basket" id="basket"> 
+    <div id="winkelwagen">
+      <form name="Bestel" action="bestel.html" method="post">
+        <table>
+          <tr><th>&nbsp;</th><th>Artikel </th><th>Aantal</th><th>Prijs per stuk</th><th>Prijs</th><th>&nbsp;</th></tr>
+          <!-- @artikel_lijst@ -->
+          <tr><td colspan="6">&nbsp;</td></tr>
+          <tr><td colspan="4"><b>Totaal</b></td><td align="right">&#8364; @totaalprijs@ </td><td>&nbsp;</td></tr>
+          <tr><td colspan="6"></td></tr><tr><td colspan="6" align="center"><input type="submit" class="btnOrder" value="Naar bestellen"></td></tr>
+        </table>
+      </form>
+    </div>
+    <div id="artikelRij">
+      <!--
+      <tr>
+        <td><img src="@image@" width="60px" height="60px" alt="foto van @artikel@"></td>
+        <td>@artikel@</td>
+        <td><input type="number" min="1" max="99" step="1" value="@aantal@" style="text-align: right;" onchange="updateBasket(@artikel_id@, this.value);"></td>
+        <td align="right">&#8364; @prijs@</td>
+        <td align="right">&nbsp;&nbsp;&#8364; @artikel_prijs@</td>
+        <td align="right">&nbsp;<i class="fa fa-trash" aria-hidden="true" style="color: red; cursor: pointer;" onclick="updateBasket(@artikel_id@, 0);"><i></td>
+        <input type="hidden" name="article_@volgnummer@" value="@artikel_id">
+        <input type="hidden" name="amount_@volgnummer" value="@aantal@">
+      </tr>
+      -->
+    </div>
+  </div>
+  
+  <main>
+    <div class="row">
+      <a href="default.html"><div class="col-2 col-s-3 nav"><div class="navButton">Home</div></div></a>
+      <a href="dierenknuffels.html"><div class="col-2 col-s-3 nav"><div class="navButton">Dierenknuffels</div></div></a>
+      <a href="gelegenheden.html"><div class="col-2 col-s-3 nav"><div class="navButton">Gelegenheden</div></div></a>
+      <div class="col-2 col-s-3 nav"><div class="navButtonActive">Gepersonaliseerd</div></div>
+      <a href="zoeken.html"><div class="col-2 col-s-3 nav"><div class="navButton">Zoeken</div></div></a>
+      <a href="overons.html"><div class="col-2 col-s-3 nav"><div class="navButton">Over ons</div></div></a>
+    </div>
+    
+    <div class="mainImage"><img class="mainImg" src="knuffels.jpg"></div>
+    
+    <div class="row filter">
+      <div class="col-1 col-s-2 btnFilter">
+        <i class="fa fa-filter" style="font-size: 1.2em;"></i>&nbsp;Filter
+        <div class="filter-content" id="artikelFilter">
+          <li onclick="setFilter('@item@');"><input type="checkbox" id="filter_@item@" value="@item@"> @item@</li>
+        </div>
+      </div>
+      <div class="col-6 col-s-4">
+        <div id="gekozenFilters">
+          <!-- <span class="selectedFilter">@item@ <span class="removeFilter" onclick="setFilter('@item@');">X</span></span> -->
+        </div>
+      </div>
+      <div class="col-3 col-s-3">
+        <div>
+          Sorteer op: 
+          <select id="sortering" onchange="displayArticles();">
+            <option value="">Geen</option>
+            <option value="Soort">Soort</option>
+            <option value="Kleur">Kleur</option>
+            <option value="Prijs (laag-hoog)">Prijs (laag-hoog)</option>
+            <option value="Prijs (hoog-laag)">Prijs (hoog-laag)</option>
+          </select>
+        </div>
+      </div>
+      <div class="col-2 col-s-3">Aantal gevonden artikelen: <span id="aantalArtikelen">0</span></div>
+    </div>
+    
+    <div class="row articleList" id="artikelen">
+      <!--
+      <div class="col-3 col-s-4">
+        <div class="article">
+          <table width="100%">
+            <tr><th colspan="2" align="center">@artikel@</th></tr>
+            <tr><td colspan="2" align="center"><img class="articleImg" src="img/@image@" width="100px" height="100px" alt="foto van @artikel@"></td></tr>
+            <tr><td>Soort:</td><td>@soort@</td></tr>
+            <tr><td>Kleur:</td><td>@kleur@</td></tr>
+            <tr><td>Prijs:</td><td>&#8364; @prijs@</td></tr>
+            <tr><td colspan="2">&nbsp;</td></tr>
+            <tr><td colspan="2" align="center"><span class="btnAdd" onclick="addToBasket(@artikel_id@, 1);">In winkelwagen</span></td></tr>
+            <tr><td colspan="2">&nbsp;</td></tr>
+          </table>
+        </div>
+      </div>
+      -->
+    </div>
+   <main>
+  <footer class="row footerDark">
+    <div class="col-4 col-s-4"><h1>Service &amp; contact</h1></div>
+    <div class="col-4 col-s-4"><div><h4>Zelf regelen in je account</h4>Volg je bestellingen<br>Retrouneer een artikel</div></div>
+    <div class="col-4 col-s-4"><div><h4>Heb je hulp nodig</h4>Neem contact op met onze klantenservice</div></div>
+  </footer>
+
+  
+  <script>
+    _url = "http://localhost/stuffz/php/data_gepersonaliseerd.php";
+    initialize();
+  </script>
+</body>
+</html>
