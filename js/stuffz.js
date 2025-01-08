@@ -60,6 +60,8 @@ async function initialize() {
       _colors.push(_articles[i].color);
     }
   }
+
+  // Toon de filters
   if (_filterCode.length > 0 ) {
     let filters = '';
     // Creeer de HTML-code voor de filter opties voor soorten
