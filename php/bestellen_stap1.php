@@ -1,6 +1,11 @@
 <?php
 // regel is:
-// http://localhost/webshop-opdracht/php/bestellen_stap1.php?naam=Johan&adres=iets&postcode=4152ee&plaats=Leerdam&rekeningnr=464836585475
+// http://localhost/webshop-opdracht/php/bestellen_stap1.php
+//      ?naam=Johan
+//      &adres=iets
+//      &postcode=4152ee
+//      &plaats=Leerdam
+//      &rekeningnr=464836585475
 //
     $servername = "localhost";
     $username = "root";
