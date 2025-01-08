@@ -1,4 +1,4 @@
-let _url = "http://localhost/stuffz/php/all_data.php";
+let _url = '';
 
 var _types = []; 
 var _colors = [];
@@ -46,7 +46,7 @@ async function initialize() {
     if (_url.length > 0) {
       _articles = await getData(_url);
     }
-    _allArticles = await getData('http://localhost/stuffz/php/all_data.php');
+    _allArticles = await getData('http://localhost/webshop-opdracht/php/all_data.php');
   }
   
   // bepaal de soorten en kleuren waarop gefilterd kan worden
