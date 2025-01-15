@@ -6,7 +6,7 @@
 //      &postcode=4152ee
 //      &plaats=Leerdam
 //      &rekeningnr=464836585475
-//
+
     $servername = "localhost";
     $username = "root";
     $password = "root";
